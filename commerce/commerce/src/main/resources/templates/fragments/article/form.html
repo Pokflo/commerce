@@ -1,0 +1,17 @@
+<form xmlns:th="http://www.thymeleaf.org">
+
+    <div>
+        <label th:for="article"> Article</label>
+        <div><input type="text" th:field="*{article.nom}"></div>
+    </div>
+    <div th:if="${#fields.hasErrors('article.nom')}" th:errors="*{article.nom}"></div>
+    <div>
+        <label for="prix">Prix</label>
+        <div><input type="text" th:field="*{prix.nom}"></div>
+    </div>
+    <div th:if="${#fields.hasErrors('prix.nom')}" th:errors="*{prix.nom}"></div>
+
+
+
+
+</form>
